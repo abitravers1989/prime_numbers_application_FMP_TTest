@@ -1,12 +1,14 @@
 # What is this application?
 
-A console application which given a number, N, outputs a table of N's Prime Numbers.
+A console application which given a number, N, outputs a table of the first N number of Prime Numbers.
 
 To use it just input a whole number at or above 1 and expect to see a grid of XXX number prime numbers which occur after it.
 
 # What language is it in?
 
 Javascript
+
+Tested with Jasmine.
 
 # What was my MVP
 
@@ -28,6 +30,17 @@ Unit test coverage is high.
 
 # How do I test it?
 
+First make sure you have jasmine installed:
+
+``````
+$npm install -g jasmine
+``````
+
+Then open your terminal and type:
+``````
+$jasmine
+``````
+
 # What did you do with it that you are pleased about?
 
 # What would you do if you had more time?
@@ -42,3 +55,20 @@ formatting the output.
 -	a test driven approach
 - loosely coupled and highly cohesive design
 - perfection is not when there is nothing left to add, but when there is nothing left to take away
+
+
+# My approach.
+
+1. Since this is test driven; workout testing framework to use.
+Settled with Jasmine as have used it before when building a javascript / node application. (I looked at when I have done this in the past).
+
+2. Define MVP.
+
+3. Simple design - non-code breaking down responsibilities and potential relationships.
+
+4. Define my unknowns.
+
+5. Unknowns included prime numbers / what actually to output. Since this seemed a very important part of the whole app I researched this before continuing.
+
+6. Writing a Javascript application which works in the console. Taking user input from stdin and outputting a table of prime numbers back to the console.
+So the next thing I looking into was how to create a command line application in node.js.
