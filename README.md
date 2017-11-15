@@ -88,6 +88,7 @@ So the next thing I looking into was how to create a command line application in
 7. Had to think about how to render this and have it running in the command line.  -->
 
 Design the first part if the programme:
+![Design Example / Thinking](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/first_design.jpg)
 
 
 
@@ -102,7 +103,7 @@ Created the information story for this class / functionality/ repo:
 
 Used this to write the tests.
 
-Then wrote the code. 
+Then wrote the code.
 
 
 # The information flow through the app
