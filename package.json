@@ -4,7 +4,8 @@
   "description": "A console application which given a number, N, outputs a table of the first N number of Prime Numbers.",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine" 
+    "test": "jasmine",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/abitravers1989/prime_numbers_application_FMP_TTest#readme",
   "devDependencies": {
+    "jasmine": "^2.8.0"
+  },
+  "dependencies": {
     "jasmine": "^2.8.0"
   }
 }

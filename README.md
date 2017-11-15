@@ -123,5 +123,6 @@ Taking a unit of code and making sure it works in a repeatable / replicable way.
 
 Building Modular, single responsibility javascript; https://www.youtube.com/watch?v=yD2lMmmjB2E
 
-Understanding modules: https://www.sitepoint.com/understanding-module-exports-exports-node-js/
+Understanding modules:
+http://www.tutorialsteacher.com/nodejs/nodejs-module-exports https://www.sitepoint.com/understanding-module-exports-exports-node-js/
 https://www.youtube.com/watch?v=SmBb2SSZqFU
