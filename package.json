@@ -1,0 +1,19 @@
+{
+  "name": "prime_numbers_generator",
+  "version": "1.0.0",
+  "description": "A console application which given a number, N, outputs a table of the first N number of Prime Numbers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abitravers1989/prime_numbers_application_FMP_TTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/issues"
+  },
+  "homepage": "https://github.com/abitravers1989/prime_numbers_application_FMP_TTest#readme"
+}

@@ -28,6 +28,14 @@ Unit test coverage is high.
 
 # How do I run it?
 
+1st install Node.js if you haven't already.
+
+Or check you have it installed by running in your terminal:
+
+```````
+$node -v
+```````
+
 # How do I test it?
 
 First make sure you have jasmine installed:
@@ -35,6 +43,10 @@ First make sure you have jasmine installed:
 ``````
 $npm install -g jasmine
 ``````
+
+Or download it from here:
+
+https://github.com/jasmine/jasmine/releases
 
 Then open your terminal and type:
 ``````
@@ -68,7 +80,40 @@ Settled with Jasmine as have used it before when building a javascript / node ap
 
 4. Define my unknowns.
 
-5. Unknowns included prime numbers / what actually to output. Since this seemed a very important part of the whole app I researched this before continuing.
+<!-- 5. Unknowns included prime numbers / what actually to output. Since this seemed a very important part of the whole app I researched this before continuing.
 
 6. Writing a Javascript application which works in the console. Taking user input from stdin and outputting a table of prime numbers back to the console.
 So the next thing I looking into was how to create a command line application in node.js.
+
+7. Had to think about how to render this and have it running in the command line.  -->
+
+Design the first part if the programme:
+
+
+
+Decided to start with the functionality/ repo responsible for checking the input number since this was a known and I could start coding before trying to understand how to get user input from the console:
+
+Created the information story for this class / functionality/ repo:
+
+
+-  1st be passed the number which has been input by the user.
+- 2nd check the input number against the given criteria.
+- 3rd After checks are done either pass an error message to the function responsible for console in and output, or pass the number to the function responsible for calculating if it is prime.
+
+Used this to write the tests.
+
+Then wrote the code. 
+
+
+# The information flow through the app
+
+Input number passed to programme
+
+Number checked
+
+Prime numbers generated
+
+
+# Unit Test
+
+Taking a unit of code and making sure it works in a repeatable / replicable way.
