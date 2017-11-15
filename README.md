@@ -43,15 +43,15 @@ First make sure you have jasmine installed:
 ``````
 $npm install -g jasmine
 ``````
+(Information on how to downlaod jasmine found here; https://jasmine.github.io/pages/getting_started.html).
 
-Or download it from here:
 
-https://github.com/jasmine/jasmine/releases
+To run it open the specRunner.html file in your browser.
 
-Then open your terminal and type:
-``````
-$jasmine
-``````
+Further Tests to add:
+
+Navigate to app directory, run eslint {folder name} to run the linter
+Navigate to app directory, run istanbul cover {test file} to check code coverage..
 
 # What did you do with it that you are pleased about?
 
@@ -118,3 +118,10 @@ Prime numbers generated
 # Unit Test
 
 Taking a unit of code and making sure it works in a repeatable / replicable way.
+
+# Research
+
+Building Modular, single responsibility javascript; https://www.youtube.com/watch?v=yD2lMmmjB2E
+
+Understanding modules: https://www.sitepoint.com/understanding-module-exports-exports-node-js/
+https://www.youtube.com/watch?v=SmBb2SSZqFU
