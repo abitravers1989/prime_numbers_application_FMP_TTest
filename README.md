@@ -59,6 +59,10 @@ Navigate to app directory, run istanbul cover {test file} to check code coverage
 
 # What would you do if you had more time?
 
+controller.js
+
+Additional functionality; if the user input an invalid number it loops back to the start of the programme automatically, instead of user having to re-start it.
+
 # What was the key criteria?
 
 performant prime algorithm which can generate large primes

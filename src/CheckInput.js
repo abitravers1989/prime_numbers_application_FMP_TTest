@@ -11,7 +11,12 @@ CheckInput.prototype.isString = function (userInput){
 CheckInput.prototype.validNumber = function (userInput){
    this.isString(userInput);
    if ( (userInput >= 1) && ((userInput%1) == 0) && (isFinite(userInput) === true)) this.inputNrCorrect = true;
+   this.return();
 };
+
+CheckInput.prototype.return = function(){
+  return this.inputNrCorrect
+}
 
 // module.exports.CheckInput = CheckInput;
 //

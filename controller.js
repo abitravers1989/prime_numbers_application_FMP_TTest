@@ -11,10 +11,23 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("Please enter a number to be PRIMED. A valid number is one which is higher than 1, not infinate, not a decimal number and of course a number not a string (Sorry to get all ruley on you!).", (userInput) => {
-  console.log(userInput)
-  rl.close();
-});
+var runApplication = function(){
+  rl.question("Please enter the numbers of PRIMES you want. A valid number is one which is higher than 1, not infinate, not a decimal number and of course a number not a string (Sorry to get all ruley on you!).", (userInput) => {
+     console.log(userInput)
+     var checkInput = new CheckInput();
+    if (checkInput.validNumber(userInput)){
+     console.log("valid")
+    rl.close();
+    }
+  // rl.close();
+ });
+}
 
+runApplication();
 
-// if (checkInput.inputNrCorrect === false) console.log("Please enter a valid number. Little reminder; a valid number is one which is higher than 1, not infinate, not a decimal number and of course a number not a string.")
+// rl.question("Please enter a number to be PRIMED. A valid number is one which is higher than 1, not infinate, not a decimal number and of course a number not a string (Sorry to get all ruley on you!).", (userInput) => {
+//   console.log(userInput)
+
+//   // if (checkInput.inputNrCorrect === false) console.log("Sorry this is not a valid number please start again.")
+//   // console.log(checkInput.inputNrCorrect);
+//
