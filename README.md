@@ -4,6 +4,8 @@ A console application which given a number, N, outputs a table of the first N nu
 
 To use it just input a whole number at or above 1 and expect to see a grid of XXX number prime numbers which occur after it.
 
+A prime number is a number larger than 1 which only has two factors, 1 and the number itself.
+
 # What language is it in?
 
 Javascript

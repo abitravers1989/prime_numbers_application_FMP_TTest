@@ -7,33 +7,41 @@ const CheckInput = require('../src/CheckInput').CheckInput;
 describe("checkInput", function (){
   var checkInput;
 
-  // beforeEach(function(){
-  //   checkInput = new CheckInput();
-  // });
+  beforeEach(function(){
+    checkInput = new CheckInput();
+  });
 
   it("Checks the input number which has been passed to it is not a string", function(){
-    checkInput = new CheckInput("not-number");
-    checkInput.isString();
+    checkInput.isString("not-number");
     expect(checkInput.inputNrCorrect).toEqual(false);
   });
 
   it("Checks the input number which has been passed to it is not a string", function(){
-    checkInput = new CheckInput(4);
-    checkInput.isString();
+    checkInput.isString(4);
     expect(checkInput.inputNrCorrect).toEqual(true);
   });
 
-  it("Checks the input number is a positive number", function(){
-    checkInput = new CheckInput(-1);
-    checkInput.isString();
-    checkInput.validNumber()
+  it("Checks the input number is a positive number which is higher than 1", function(){
+    checkInput.isString(-1);
+    checkInput.validNumber(-1)
     expect(checkInput.inputNrCorrect.toEqual(false));
   });
 
-  it("Checks the input number is a positive number", function(){
-    checkInput = new CheckInput(8);
-    checkInput.isString();
-    checkInput.validNumber()
-    expect(checkInput.validNumber().toEqual(true));
+  it("Checks the input number is a positive number which is higher than 1 and lower than infinity", function(){
+    checkInput.isString(8);
+    checkInput.validNumber(8)
+    expect(checkInput.inputNrCorrect.toEqual(true));
+  });
+
+  it("Checks the input number is a positive number which is lower than infinity", function(){
+    checkInput.isString(100000000000000000000);
+    checkInput.validNumber(100000000000000000000)
+    expect(checkInput.inputNrCorrect.toEqual(false));
+  });
+
+  it("Checks the input number is not a decimal number, if it is it sets this.inputNrCorrect to false", function(){
+    checkInput.isString(9.88);
+    checkInput.validNumber(9.88)
+    expect(checkInput.inputNrCorrect.toEqual(false));
   });
 });

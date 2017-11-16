@@ -1,23 +1,25 @@
 var CheckInput = function(userInput) {
   this.userInput = userInput;
+  // Why is this.inputNrCorrect undefined here?
   this.inputNrCorrect = false;
 };
 
 // checking it is not a string
 CheckInput.prototype.isString = function (){
-   if (isNaN(this.userInput) === true) {
-     console.log("nnn")
-     this.inputCorrect = false
-   }
-   // else {
-   //   this.inputCorrect = true
-   // }
+   if (Number.isNaN(this.userInput) !== true) {
+     this.inputCorrect = true;
+     return this.inputCorrect
+     console.log(this.inputCorrect)
+   // }; else {
+   //   this.inputCorrect = false;
+   // };
 };
 
 CheckInput.prototype.validNumber = function (userInput){
    if (this.userInput > 1) {
      this.inputCorrect = true
    };
+ };
 };
 //
 module.exports.CheckInput = CheckInput;
@@ -30,7 +32,7 @@ console.log(checkInput.inputNrCorrect)
 checkInpu = new CheckInput(8);
 checkInpu.isString()
 checkInpu.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
+console.log(checkInpu.inputNrCorrect)
 
 checkInput = new CheckInput(-1);
 checkInput.isString();
