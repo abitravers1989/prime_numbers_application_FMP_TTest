@@ -14,10 +14,10 @@ describe("checkInput", function (){
     expect(checkInput.inputNrCorrect).toEqual(false);
   });
 
-  it("Checks the input number which has been passed to it is not a string", function(){
-    checkInput.isString(4);
-    expect(checkInput.inputNrCorrect).toEqual(true);
-  });
+  // it("Checks the input number which has been passed to it is not a string", function(){
+  //   checkInput.isString(4);
+  //   expect(checkInput.inputNrCorrect).toEqual(true);
+  // });
 
   it("Checks the input number is a positive number which is higher than 1", function(){
     checkInput.isString(-1);
