@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 });
 
 rl.question("Please enter a number to be PRIMED. A valid number is one which is higher than 1, not infinate, not a decimal number and of course a number not a string (Sorry to get all ruley on you!).", (userInput) => {
-  console.log("You answered ${userInput}")
+  console.log(userInput)
   rl.close();
 });
 
