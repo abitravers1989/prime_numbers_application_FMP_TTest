@@ -12,7 +12,7 @@ CheckInput.prototype.isString = function (userInput){
 
 CheckInput.prototype.validNumber = function (userInput){
    this.isString();
-   if (userInput >= 1) this.inputNrCorrect = true;
+   if (userInput >= 1 && (userInput%1) == 0) this.inputNrCorrect = true;
  };
 
 //
@@ -24,5 +24,9 @@ checkInput.inputNrCorrect
 console.log(checkInput.inputNrCorrect)
 
 checkInput.validNumber("nnn")
+checkInput.inputNrCorrect
+console.log(checkInput.inputNrCorrect)
+
+checkInput.validNumber(9.888)
 checkInput.inputNrCorrect
 console.log(checkInput.inputNrCorrect)
