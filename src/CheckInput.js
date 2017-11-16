@@ -5,34 +5,25 @@ var CheckInput = function() {
 
 // checking it is not a string
 CheckInput.prototype.isString = function (userInput){
-   if (isNaN(userInput)) this.inputNrCorrect = false;
-   console.log('String checked called');
-   // return this.inputCorrect
+  if (isNaN(userInput)) this.inputNrCorrect = false;
 };
 
- // CheckInput.prototype.isFinite = function (userInput){
- //    this.isString(userInput);
- //    if (isFinite(userInput) === true) this.inputNrCorrect = true;
- //    console.log("isFinite called")
- //  };
+CheckInput.prototype.validNumber = function (userInput){
+   this.isString(userInput);
+   if ( (userInput >= 1) && ((userInput%1) == 0) && (isFinite(userInput) === true)) this.inputNrCorrect = true;
+};
 
-  CheckInput.prototype.validNumber = function (userInput){
-     this.isString(userInput);
-     if ( (userInput >= 1) && ((userInput%1) == 0) && (isFinite(userInput) === true)) this.inputNrCorrect = true;
-   };
-
-//
 // module.exports.CheckInput = CheckInput;
-
-checkInput = new CheckInput();
-checkInput.validNumber(8)
-checkInput.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
-
-checkInput.validNumber("nnn")
-checkInput.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
-
-checkInput.validNumber(9.888)
-checkInput.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
+//
+// checkInput = new CheckInput();
+// checkInput.validNumber(8)
+// checkInput.inputNrCorrect
+// console.log(checkInput.inputNrCorrect)
+//
+// checkInput.validNumber("nnn")
+// checkInput.inputNrCorrect
+// console.log(checkInput.inputNrCorrect)
+//
+// checkInput.validNumber(9.888)
+// checkInput.inputNrCorrect
+// console.log(checkInput.inputNrCorrect)

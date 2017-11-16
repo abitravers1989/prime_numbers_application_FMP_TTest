@@ -154,8 +154,9 @@ https://www.youtube.com/watch?v=SEQ1SjXzAds
 http://www.tutorialsteacher.com/nodejs/nodejs-module-exports https://www.sitepoint.com/understanding-module-exports-exports-node-js/
 https://www.youtube.com/watch?v=SmBb2SSZqFU
 
-Building Modular, single responsibility javascript; https://www.youtube.com/watch?v=yD2lMmmjB2E
-
-
 Infinity:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
+
+Understanding how to read input from console:
+https://stackoverflow.com/questions/20086849/how-to-read-from-stdin-line-by-line-in-node
+https://nodejs.org/api/readline.html
