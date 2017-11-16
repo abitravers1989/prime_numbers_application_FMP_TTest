@@ -30,7 +30,7 @@ checkInput.inputNrCorrect
 
 checkInput.isString(8)
 checkInput.inputNrCorrect
-
+console.log(checkInput.inputNrCorrect)
 //
 //
 // console.log(checkInput.inputNrCorrect)
@@ -39,4 +39,4 @@ checkInput.inputNrCorrect
 // checkInput.isString();
 // checkInput.validNumber()
 // checkInput.inputNrCorrect
-// console.log(checkInput.inputNrCorrect)
+console.log(checkInput.inputNrCorrect)
