@@ -1,7 +1,8 @@
 // This module is responsible for getting the input from the user then passing this number through the other classes
 // Calling instances of them to then generate the prime number table.
 
-const CheckInput = require('./src/checkInput').CheckInput;
+// const CheckInput = require('./src/checkInput').CheckInput;
+// const checkInput = new CheckInput();
 const readline = require('readline');
 
 // Creating an instance of the readline class.
@@ -14,7 +15,6 @@ const rl = readline.createInterface({
 var runApplication = function(){
   rl.question("Please enter the numbers of PRIMES you want. A valid number is one which is higher than 1, not infinate, not a decimal number and of course a number not a string (Sorry to get all ruley on you!).", (userInput) => {
      console.log(userInput)
-     var checkInput = new CheckInput();
     if (checkInput.validNumber(userInput)){
      console.log("valid")
     rl.close();

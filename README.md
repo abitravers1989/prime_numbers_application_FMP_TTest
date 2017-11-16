@@ -1,32 +1,28 @@
 # What is this application?
 
-A console application which given a number, N, outputs a table of the first N number of Prime Numbers.
+A node.js application which runs in the terminal.
 
-To use it just input a whole number at or above 1 and expect to see a grid of XXX number prime numbers which occur after it.
+When ran it prompts the user for a number, N.
 
-A prime number is a number larger than 1 which only has two factors, 1 and the number itself.
+It then outputs a table (to the terminal):
+The first row of this table is the N number of prime numbers starting with 2 (the first prime number).
+
+The next rows are the multiplication tables of the prime numbers.
+
+The number given by the user must be between 1 and most be finite. It must be a whole number.
+
 
 # What language is it in?
 
-Javascript
+The language of the code is Javascript.
 
-Tested with Jasmine.
+Node.js is used to run the application. The environment the application is ran in is the terminal (not the browser).
 
-# What was my MVP
+Constructor-prototype Javascript design pattern was used.  Each module has been separated into a its own file. This was done in an attempt to separate out concerns. Each constructor has it's own unique responsibility.
 
-A user gives a number to the console.
-A javascript programme which has been test driven, has an algorithm which can generate a list of 20,000+ prime numbers which start with (N+1 x N+1).
-A grid of these number is output to the console.
-An example when N is 3:
+Tested with Jasmine. I have used Jasmine for unit tests before and liked the amount of information it provides when I test is failing.
 
-|      |    2 |    3 |    5 |
-|    2 |    4 |    6 |   10 |
-|    3 |    6 |    9 |   15 |
-|    5 |   10 |   15 |   25 |
-
-The number N must be 1 or above. First MVP will not include an error message for when this isn't done.
-
-Unit test coverage is high.
+(I also tested by ... etc )
 
 # How do I run it?
 
@@ -56,6 +52,10 @@ Navigate to app directory, run eslint {folder name} to run the linter
 Navigate to app directory, run istanbul cover {test file} to check code coverage..
 
 # What did you do with it that you are pleased about?
+
+I learnt how to generate a list of prime numbers with an algorithm. I have not done maths since A level Chemistry which was a long time ago for me.
+
+I understood how the information flowed through the programme.
 
 # What would you do if you had more time?
 
@@ -140,11 +140,26 @@ I went about creating all the other modules and functionality with the same proc
 
 # The information flow through the app
 
-Input number passed to programme
+The controller file gets the number from the user. It does this through asking the user to input a number in the console.
 
-Number checked
+It then creates a new instance of the check Number module. Which checks the number is valid and fits the given criteria.
 
-Prime numbers generated
+The controller then creates a new instance of the generate primes module. This module will generate an array of the first N(where N is the number input) prime numbers.
+
+Next a new instance of the multiplication generator is called.
+This generates the multiplication tables......
+
+Table formatter ...
+
+output
+
+# Prime number generator explained.
+
+<!-- I have modelled this on the 'sieve of Eratosthenes Algorithm'. -->
+
+1 is not a prime number so it starts with 2.
+
+
 
 
 # Unit Test
@@ -164,3 +179,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 Understanding how to read input from console:
 https://stackoverflow.com/questions/20086849/how-to-read-from-stdin-line-by-line-in-node
 https://nodejs.org/api/readline.html
+
+Understanding error message (x is not a Constructor TypeError):
+https://airbrake.io/blog/javascript-error-handling/x-not-constructor-typeerror
+
+Understanding prime number algorithms:
+https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+https://www.youtube.com/watch?v=I6HrVRGGYNI

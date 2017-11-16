@@ -1,5 +1,8 @@
+// This repo/ function will: 1st be passed the number which has been input by the user.
+// 2nd check the input number against the given criteria.
+// 3rd It will return true or false depending on passing or failing the criteria.
+
 var CheckInput = function() {
-  // Why is this.inputNrCorrect undefined here?... because this is the window
   this.inputNrCorrect = false;
 };
 
@@ -11,24 +14,11 @@ CheckInput.prototype.isString = function (userInput){
 CheckInput.prototype.validNumber = function (userInput){
    this.isString(userInput);
    if ( (userInput >= 1) && ((userInput%1) == 0) && (isFinite(userInput) === true)) this.inputNrCorrect = true;
-   this.return();
+   return this.inputNrCorrect
 };
 
-CheckInput.prototype.return = function(){
-  return this.inputNrCorrect
-}
+// CheckInput.prototype.return = function(){
+//   return this.inputNrCorrect
+// }
 
 // module.exports.CheckInput = CheckInput;
-//
-// checkInput = new CheckInput();
-// checkInput.validNumber(8)
-// checkInput.inputNrCorrect
-// console.log(checkInput.inputNrCorrect)
-//
-// checkInput.validNumber("nnn")
-// checkInput.inputNrCorrect
-// console.log(checkInput.inputNrCorrect)
-//
-// checkInput.validNumber(9.888)
-// checkInput.inputNrCorrect
-// console.log(checkInput.inputNrCorrect)
