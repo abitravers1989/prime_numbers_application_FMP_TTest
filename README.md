@@ -93,7 +93,6 @@ Design the first part if the programme:
 ![Design Example / Thinking](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/first_design.jpg)
 
 
-
 Decided to start with the functionality/ repo responsible for checking the input number since this was a known and I could start coding before trying to understand how to get user input from the console:
 
 Created the information story for this class / functionality/ repo:
@@ -106,6 +105,33 @@ Created the information story for this class / functionality/ repo:
 Used this to write the tests.
 
 Then wrote the code.
+
+I tested the code with; the unit tests, running parts of it in the console, and by running the specific file (checkInput.js) in the terminal and calling an instance of the class with it. If you want to replicate this, add the following to the bottom of the checkInput.js file:
+
+```````
+checkInput = new CheckInput();
+checkInput.validNumber(8)
+checkInput.inputNrCorrect
+console.log(checkInput.inputNrCorrect)
+
+checkInput.validNumber("nnn")
+checkInput.inputNrCorrect
+console.log(checkInput.inputNrCorrect)
+
+checkInput.validNumber(9.888)
+checkInput.inputNrCorrect
+console.log(checkInput.inputNrCorrect)
+
+```````
+
+Then open the terminal and run:
+
+``````
+$node checkInput.js
+``````
+
+I went about creating all the other modules and functionality with the same process.
+
 
 
 # The information flow through the app

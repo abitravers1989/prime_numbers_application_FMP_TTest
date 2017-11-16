@@ -15,6 +15,8 @@ CheckInput.prototype.validNumber = function (userInput){
    if (userInput >= 1 && (userInput%1) == 0) this.inputNrCorrect = true;
  };
 
+
+
 //
 // module.exports.CheckInput = CheckInput;
 

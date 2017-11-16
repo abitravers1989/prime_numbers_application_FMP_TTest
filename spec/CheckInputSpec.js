@@ -11,7 +11,7 @@ describe("checkInput", function (){
 
   it("Returns true if the User Number (input number) which has been passed to it is a positive number which is higher than 1 and lower than infinity", function(){
     checkInput.validNumber(8)
-    expect(checkInput.inputNrCorrect.toEqual(true));
+    expect(checkInput.inputNrCorrect).toEqual(true);
   });
 
   it("Checks the User Number is not a string. It returns false if it is a string.", function(){
