@@ -10,12 +10,16 @@ CheckInput.prototype.isString = function (userInput){
    // return this.inputCorrect
 };
 
-CheckInput.prototype.validNumber = function (userInput){
-   this.isString();
-   if (userInput >= 1 && (userInput%1) == 0) this.inputNrCorrect = true;
- };
+ // CheckInput.prototype.isFinite = function (userInput){
+ //    this.isString(userInput);
+ //    if (isFinite(userInput) === true) this.inputNrCorrect = true;
+ //    console.log("isFinite called")
+ //  };
 
-
+  CheckInput.prototype.validNumber = function (userInput){
+     this.isString(userInput);
+     if ( (userInput >= 1) && ((userInput%1) == 0) && (isFinite(userInput) === true)) this.inputNrCorrect = true;
+   };
 
 //
 // module.exports.CheckInput = CheckInput;

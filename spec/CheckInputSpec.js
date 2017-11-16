@@ -32,7 +32,7 @@ describe("checkInput", function (){
 
 
   it("Returns false if the User Number is a number lower than infinity", function(){
-    checkInput.validNumber(100000000000000000000)
+    checkInput.validNumber(Infinity)
     expect(checkInput.inputNrCorrect).toEqual(false);
   });
 

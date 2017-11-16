@@ -149,8 +149,13 @@ Taking a unit of code and making sure it works in a repeatable / replicable way.
 
 # Research
 
-Building Modular, single responsibility javascript; https://www.youtube.com/watch?v=yD2lMmmjB2E
-
 Understanding modules:
+https://www.youtube.com/watch?v=SEQ1SjXzAds
 http://www.tutorialsteacher.com/nodejs/nodejs-module-exports https://www.sitepoint.com/understanding-module-exports-exports-node-js/
 https://www.youtube.com/watch?v=SmBb2SSZqFU
+
+Building Modular, single responsibility javascript; https://www.youtube.com/watch?v=yD2lMmmjB2E
+
+
+Infinity:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
