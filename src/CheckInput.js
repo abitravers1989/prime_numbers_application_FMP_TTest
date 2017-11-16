@@ -11,6 +11,7 @@ CheckInput.prototype.isString = function (userInput){
 };
 
 CheckInput.prototype.validNumber = function (userInput){
+   this.isString();
    if (userInput >= 1) this.inputNrCorrect = true;
  };
 
@@ -18,17 +19,10 @@ CheckInput.prototype.validNumber = function (userInput){
 // module.exports.CheckInput = CheckInput;
 
 checkInput = new CheckInput();
-
-
 checkInput.validNumber(8)
 checkInput.inputNrCorrect
 console.log(checkInput.inputNrCorrect)
-//
-//
-// console.log(checkInput.inputNrCorrect)
-//
-// checkInput = new CheckInput(-1);
-// checkInput.isString();
-// checkInput.validNumber()
-// checkInput.inputNrCorrect
+
+checkInput.validNumber("nnn")
+checkInput.inputNrCorrect
 console.log(checkInput.inputNrCorrect)
