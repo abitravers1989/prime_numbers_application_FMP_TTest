@@ -2,8 +2,6 @@
 // 2nd check the input number against the given criteria.
 // 3rd After checks are done either pass an error message to the function responsible for console in and output, or pass the number to the function responsible for calculating if it is prime.
 
-const CheckInput = require('../src/CheckInput').CheckInput;
-
 describe("checkInput", function (){
   var checkInput;
 

@@ -22,7 +22,7 @@ CheckInput.prototype.validNumber = function (userInput){
  };
 
 //
-module.exports.CheckInput = CheckInput;
+// module.exports.CheckInput = CheckInput;
 
 checkInput = new CheckInput();
 checkInput.isString("nnn")
@@ -31,12 +31,12 @@ checkInput.inputNrCorrect
 checkInput.isString(8)
 checkInput.inputNrCorrect
 
-
-
-console.log(checkInput.inputNrCorrect)
-
-checkInput = new CheckInput(-1);
-checkInput.isString();
-checkInput.validNumber()
-checkInput.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
+//
+//
+// console.log(checkInput.inputNrCorrect)
+//
+// checkInput = new CheckInput(-1);
+// checkInput.isString();
+// checkInput.validNumber()
+// checkInput.inputNrCorrect
+// console.log(checkInput.inputNrCorrect)
