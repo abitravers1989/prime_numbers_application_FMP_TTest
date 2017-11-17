@@ -5,16 +5,14 @@ var GeneratePrimes = function () {
 };
 
 GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
-
   var number = 2;
-
   Loop from number to inputNumber
 
   check each of these is not divisible by 2 and 3
 
   i = 2
   while(array.length < inputNumber) {
-    if i.isPrime   array << i
+    if num.isPrime   array << num
     i++
   }
 }
@@ -22,7 +20,8 @@ GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
 }
 
 
-GeneratePrimes.Prototype.isPrime = function(){
+GeneratePrimes.Prototype.isPrime = function(num){
+  console.log(num)
   for(var i = 2; i < num; i++)
    if(num % i === 0) return false;
  return num !== 1;
