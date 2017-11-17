@@ -166,6 +166,8 @@ Testing helped me with this as I started by writing out lists of prime numbers i
 
 Taking a unit of code and making sure it works in a repeatable / replicable way.
 
+Just doing unit tests and other tests in the console / by running the file ... WHY .ANSWER please me
+
 # Research
 
 Understanding modules:
