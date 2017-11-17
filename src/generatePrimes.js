@@ -2,18 +2,8 @@ var GeneratePrimes = function () {
   // this.primesarray = [];
 };
 
-GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
-  primesarray = [];
-  var number = 2;
-  while(array.length < inputNumber) {
-    if (num.isPrime()) { primesarray << num }
-    number+=1;
-  }
-  return primesarray
-}
 
-
-GeneratePrimes.Prototype.isPrime = function(n){
+GeneratePrimes.prototype.isPrime = function(n){
   // If n is less than 2 or not an integer then by definition cannot be prime.
   if (n < 2) {return false}
   if (n != Math.round(n)) {return false}
@@ -25,4 +15,18 @@ GeneratePrimes.Prototype.isPrime = function(n){
   }
   // Finally return whether n is prime or not.
   return isPrime;
+};
+
+GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
+  primesarray = [];
+  var number = 2;
+  while(array.length <= inputNumber) {
+    if (num.isPrime(number)) { primesarray << number }
+    number+=1;
+  }
+  return primesarray
 }
+
+
+generatePrimes = new GeneratePrimes();
+generatePrimes.createArrayofPrimes(2)
