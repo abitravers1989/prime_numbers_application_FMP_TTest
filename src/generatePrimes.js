@@ -20,12 +20,12 @@ GeneratePrimes.prototype.isPrime = function(n){
 GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
   var primesarray = [];
   var number = 2;
-  while(primesarray.length <= inputNumber) {
-    if (this.isPrime(number)) { primesarray << number }
+  while(primesarray.length < inputNumber) {
+    if (this.isPrime(number)) { primesarray.push(number) }
     console.log(primesarray)
     number+=1;
+    return primesarray;
   }
-  return primesarray
 }
 
 generatePrimes = new GeneratePrimes();
