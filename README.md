@@ -153,13 +153,13 @@ Table formatter ...
 
 output
 
-# Prime number generator explained.
+# Generating Prime module explained.
 
 <!-- I have modelled this on the 'sieve of Eratosthenes Algorithm'. -->
 
 1 is not a prime number so it starts with 2.
 
-
+Testing helped me with this as I started by writing out lists of prime numbers in the tests. These lists contained the same number of prime numbers as the number passed to it when calling the function. This allowed me to get a feel for what the prime numbers were.
 
 
 # Unit Test

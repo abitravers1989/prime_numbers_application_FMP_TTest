@@ -1,8 +1,45 @@
-// First check if the number is divisible by 2 or 3
+array = []
 
-// Then we check if the numbers from 5 upwards are prime or not. We begin with a variable of 5 and increment it by 6 each time until we get to the square root of the argument.
+var GeneratePrimes = function () {
+  this.primesarray = [];
+};
 
-// If the argument is perfectly divisible by the variable or the variable + 2, then it isn't prime. This is why we can increment the variable by 6 as each number between 5 and 11 will be checked either from the original if statement, or by this new if statement.
+GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
+
+  var number = 2;
+
+  Loop from number to inputNumber
+
+  check each of these is not divisible by 2 and 3
+
+  i = 2
+  while(array.length < inputNumber) {
+    if i.isPrime   array << i
+    i++
+  }
+}
+
+}
+
+
+GeneratePrimes.Prototype.isPrime = function(){
+  for(var i = 2; i < num; i++)
+   if(num % i === 0) return false;
+ return num !== 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 var GeneratePrimes = function (){
   //  Find all prime numbers less than this number
   var max_size = 1000;

@@ -17,8 +17,4 @@ CheckInput.prototype.validNumber = function (userInput){
    return this.inputNrCorrect
 };
 
-// CheckInput.prototype.return = function(){
-//   return this.inputNrCorrect
-// }
-
-// module.exports.CheckInput = CheckInput;
+module.exports.CheckInput = CheckInput;
