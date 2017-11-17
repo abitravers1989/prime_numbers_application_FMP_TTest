@@ -18,7 +18,7 @@ The language of the code is Javascript.
 
 Node.js is used to run the application. The environment the application is ran in is the terminal (not the browser).
 
-Constructor-prototype Javascript design pattern was used.  Each module has been separated into a its own file. This was done in an attempt to separate out concerns. Each constructor has it's own unique responsibility.
+Constructor-prototype Javascript design pattern was used.  Each module has been separated into its own file. This was done in an attempt to separate out concerns. Each constructor has it's own unique responsibility.
 
 Tested with Jasmine. I have used Jasmine for unit tests before and liked the amount of information it provides when I test is failing.
 
@@ -41,7 +41,7 @@ First make sure you have jasmine installed:
 ``````
 $npm install -g jasmine
 ``````
-(Information on how to downlaod jasmine found here; https://jasmine.github.io/pages/getting_started.html).
+(Information on how to downlaod jasmine also found here; https://jasmine.github.io/pages/getting_started.html).
 
 
 To run it open the specRunner.html file in your browser.
