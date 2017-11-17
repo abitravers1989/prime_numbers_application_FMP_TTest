@@ -18,10 +18,10 @@ GeneratePrimes.prototype.isPrime = function(n){
 };
 
 GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
-  primesarray = [];
+  var primesarray = [];
   var number = 2;
-  while(array.length <= inputNumber) {
-    if (num.isPrime(number)) { primesarray << number }
+  while(primesarray.length <= inputNumber) {
+    if (this.isPrime(number)) { primesarray << number }
     number+=1;
   }
   return primesarray
