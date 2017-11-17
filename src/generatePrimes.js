@@ -27,6 +27,5 @@ GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
   return primesarray
 }
 
-
 generatePrimes = new GeneratePrimes();
 generatePrimes.createArrayofPrimes(2)
