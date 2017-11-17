@@ -1,5 +1,5 @@
 var GeneratePrimes = function () {
-  // this.primesarray = [];
+  this.primesarray = [];
 };
 
 
@@ -18,15 +18,15 @@ GeneratePrimes.prototype.isPrime = function(n){
 };
 
 GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
-  var primesarray = [];
+  // var primesarray = [];
   var number = 2;
-  while(primesarray.length < inputNumber) {
-    if (this.isPrime(number)) { primesarray.push(number) }
-    console.log(primesarray)
+  while(this.primesarray.length < inputNumber) {
+    if (this.isPrime(number)) { this.primesarray.push(number) }
     number+=1;
-    return primesarray;
+    return this.primesarray;
   }
 }
 
 generatePrimes = new GeneratePrimes();
 generatePrimes.createArrayofPrimes(2)
+console.log(generatePrimes.primesarray)
