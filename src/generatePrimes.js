@@ -22,6 +22,7 @@ GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
   var number = 2;
   while(primesarray.length <= inputNumber) {
     if (this.isPrime(number)) { primesarray << number }
+    console.log(primesarray)
     number+=1;
   }
   return primesarray
