@@ -1,13 +1,8 @@
-// Find out whether 337 is a prime number or not?
-//
-// Step 1: 19 ¿ square root (337) Prime numbers less than 19 are 2, 3, 5, 7, 11, 13, 17 Step 2: 337 is not divisible by any of them
-//
-// Therefore 337 is a prime number
+// First check if the number is divisible by 2 or 3
 
+// Then we check if the numbers from 5 upwards are prime or not. We begin with a variable of 5 and increment it by 6 each time until we get to the square root of the argument.
 
-// Find square root of the number.. if this number is decimal take the next number
-// Then take all the avliable numbers from 1 to the square root of that number.
-
+// If the argument is perfectly divisible by the variable or the variable + 2, then it isn't prime. This is why we can increment the variable by 6 as each number between 5 and 11 will be checked either from the original if statement, or by this new if statement.
 var GeneratePrimes = function (){
   //  Find all prime numbers less than this number
   var max_size = 1000;
