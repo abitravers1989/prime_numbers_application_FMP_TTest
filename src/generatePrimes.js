@@ -26,7 +26,10 @@ GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
     // If i return the primes array here then it only sets the first one then ends the loop
   }
   return this.primesarray;
-}
+};
+
+module.exports.GeneratePrimes = GeneratePrimes;
+
 
 generatePrimes = new GeneratePrimes();
 generatePrimes.createArrayofPrimes(2)
