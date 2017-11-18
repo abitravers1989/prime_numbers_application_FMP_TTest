@@ -4,6 +4,10 @@
 const CheckInput = require('./src/checkInput').CheckInput;
 const checkInput = new CheckInput();
 const readline = require('readline');
+const GeneratePrimes = require('./src/generatePrimes').GeneratePrimes;
+console.log(GeneratePrimes)
+const generatePrimes = new GeneratePrimes();
+
 
 // Creating an instance of the readline class.
 // Each instance only accepts a single input
@@ -13,12 +17,14 @@ const rl = readline.createInterface({
 });
 
 var runApplication = function(){
-  rl.question("Please enter the numbers of PRIMES you want. A valid number is one which is higher than 1, not infinate, not a decimal number and of course a number not a string (Sorry to get all ruley on you!).", (userInput) => {
-     console.log(userInput)
+  rl.question("Please enter the numbers of PRIMES you want.", (userInput) => {
+  var inputUser = checkInput.validNumber(userInput)
+       console.log(inputUser)
     if (checkInput.validNumber(userInput)){
      console.log("valid");
-     cons = new CheckInput
-     cons.validNumber(100);
+     generatePrimes.createArrayofPrimes(userInput)
+     // cons = new CheckInput
+     // cons.validNumber(100);
     rl.close();
     }
   // rl.close();
