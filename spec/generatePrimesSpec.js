@@ -5,9 +5,9 @@ describe ('generatePrime', function(){
     generatePrime = new GeneratePrimes();
   });
 
-  // it("Is initialized with an empty array", function(){
-  //   expect(generatePrime.primesarray).toEqual([]);
-  // });
+  it("Is initialized with an empty array", function(){
+    expect(generatePrime.primesarray).toEqual([]);
+  });
 
   it("Generated an array of prime numbers which is as long as the number passed to it. (The input number).", function(){
     // generatePrime.createArrayofPrimes(2)
@@ -25,8 +25,8 @@ describe ('generatePrime', function(){
   });
 
   it("It can generate up to 20,000 prime numbers", function(){
-      generatePrime.createArrayofPrimes(20000)
-      expect(generatePrime.primesarray.length).toEqual(20000)
-    });
+    generatePrime.createArrayofPrimes(20000)
+    expect(generatePrime.primesarray.length).toEqual(20000)
+  });
 
 });
