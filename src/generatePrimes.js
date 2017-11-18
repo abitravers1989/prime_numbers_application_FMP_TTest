@@ -23,10 +23,12 @@ GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
   while(this.primesarray.length < inputNumber) {
     if (this.isPrime(number)) { this.primesarray.push(number) }
     number+=1;
-    return this.primesarray;
+    // If i return the primes array here then it only sets the first one then ends the loop
   }
+  return this.primesarray;
 }
 
 generatePrimes = new GeneratePrimes();
 generatePrimes.createArrayofPrimes(2)
+// Javascript doesn't explicitly return so i have to call it to see it?
 console.log(generatePrimes.primesarray)
