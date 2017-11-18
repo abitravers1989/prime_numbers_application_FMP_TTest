@@ -17,7 +17,7 @@ describe ('generateMultiplicationTs', function(){
 
   it("The length of the multiplication table arrays is the same as length of the primes array passed to it.", function(){
     var tables = multiplicationTables.generateMultiplicationTables(inputPimesArray)
-    expect(tables.size?????).toEqual(inputPimesArray.length)
+    expect(tables.size).toEqual(inputPimesArray.length)
   });
 
 });
