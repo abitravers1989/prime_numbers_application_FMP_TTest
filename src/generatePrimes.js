@@ -5,7 +5,7 @@ var GeneratePrimes = function () {
 
 GeneratePrimes.prototype.isPrime = function(n){
   // If n is less than 2 or not an integer then by definition cannot be prime.
-  if (n < 2) {return false}
+  // if (n < 2) {return false}
   if (n != Math.round(n)) {return false}
   // Now assume that n is prime, we will try to prove that it is not.
   var isPrime = true;

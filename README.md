@@ -161,6 +161,10 @@ output
 
 Testing helped me with this as I started by writing out lists of prime numbers in the tests. These lists contained the same number of prime numbers as the number passed to it when calling the function. This allowed me to get a feel for what the prime numbers were.
 
+I first wrote the method in sudo code. I wanted it to loop through from 2(the first prime) generating prime numbers, storing them in an array, until it had the same amount of prime numbers as the number provided to it. For this i knew I needed to check the length of the primes array.
+
+I then tried to create my own prime number finder method. I started by checking the provided number's(which has been supplied to it by the function which is looping through / counting all numbers from 2) divisibility by 2, 3, then 6 and 7. I stopped it at the square root of the number. This was super slow and unnecessary and I wasn't sure that it accounted for all primes. So I used this to create a new one: (http://studymaths.co.uk/topics/checkIfPrime.php).
+
 
 # Unit Test
 
