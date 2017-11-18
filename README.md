@@ -192,3 +192,8 @@ https://airbrake.io/blog/javascript-error-handling/x-not-constructor-typeerror
 Understanding prime number algorithms:
 https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 https://www.youtube.com/watch?v=I6HrVRGGYNI
+
+
+Multiplication Tables:
+https://www.youtube.com/watch?v=t4MOEfpsC60
+https://danmartensen.svbtle.com/javascripts-map-reduce-and-filter

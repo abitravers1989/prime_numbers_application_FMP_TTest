@@ -12,11 +12,11 @@ describe ('generateMultiplicationTs', function(){
   });
 
   it("Generates an array of multiplication tables for each of the numbers in the primes array passed to it.", function(){
-    expect(multiplicationTables.generateMultiplicationTables(inputPimesArray)).toEqual(expectedOutput)
+    expect(multiplicationTables.gMTables(inputPimesArray)).toEqual(expectedOutput)
   });
 
   it("The length of the multiplication table arrays is the same as length of the primes array passed to it.", function(){
-    var tables = multiplicationTables.generateMultiplicationTables(inputPimesArray)
+    var tables = multiplicationTables.gMTables(inputPimesArray)
     expect(tables.size).toEqual(inputPimesArray.length)
   });
 
