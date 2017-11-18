@@ -1,5 +1,7 @@
 describe ('generateMultiplicationTs', function(){
-  var generatePrime;
+  // var multiplicationTables;
+  const inputPimesArray = [2,3,5,7,11];
+  const expectedOutput = [[2,3,5,7,11],[2,4,6,10,12],[3,6,9,15,18],[5,10,15,25,30], [7,14,21,28,35], [11,22,33,44,55]]
 
   beforeEach(function(){
     multiplicationTables = new GenerateMultiplicationTs();
@@ -10,13 +12,12 @@ describe ('generateMultiplicationTs', function(){
   });
 
   it("Generates an array of multiplication tables for each of the numbers in the primes array passed to it.", function(){
-    multiplicationTables.generateMultiplicationTables([2, 3, 5, 7, 11])
-    // expect(generatePrime.primesarray).toEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71])
+    expect(multiplicationTables.generateMultiplicationTables(inputPimesArray)).toEqual(expectedOutput)
   });
 
   it("The length of the multiplication table arrays is the same as length of the primes array passed to it.", function(){
-    multiplicationTables.generateMultiplicationTables([2, 3, 5, 7, 11])
-    // expect(generatePrime.primesarray.length).toEqual(20000)
+    var tables = multiplicationTables.generateMultiplicationTables(inputPimesArray)
+    expect(tables.size?????).toEqual(inputPimesArray.length)
   });
 
 });
