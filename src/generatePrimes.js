@@ -31,7 +31,7 @@ GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
 module.exports.GeneratePrimes = GeneratePrimes;
 
 
-generatePrimes = new GeneratePrimes();
-generatePrimes.createArrayofPrimes(2)
-// Javascript doesn't explicitly return so i have to call it to see it?
-console.log(generatePrimes.primesarray)
+// generatePrimes = new GeneratePrimes();
+// generatePrimes.createArrayofPrimes(2)
+// // Javascript doesn't explicitly return so i have to call it to see it?
+// console.log(generatePrimes.primesarray)

@@ -5,7 +5,6 @@ const CheckInput = require('./src/checkInput').CheckInput;
 const checkInput = new CheckInput();
 const readline = require('readline');
 const GeneratePrimes = require('./src/generatePrimes').GeneratePrimes;
-console.log(GeneratePrimes)
 const generatePrimes = new GeneratePrimes();
 
 
@@ -18,11 +17,11 @@ const rl = readline.createInterface({
 
 var runApplication = function(){
   rl.question("Please enter the numbers of PRIMES you want.", (userInput) => {
-  var inputUser = checkInput.validNumber(userInput)
-       console.log(inputUser)
+       // console.log(inputUser)
     if (checkInput.validNumber(userInput)){
      console.log("valid");
      generatePrimes.createArrayofPrimes(userInput)
+     console.log(generatePrimes.primesarray)
      // cons = new CheckInput
      // cons.validNumber(100);
     rl.close();
