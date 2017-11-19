@@ -19,12 +19,6 @@ GenerateMultiplicationTs.prototype.gMTables = function(primesArray){
    return this.primesArray;
 };
 
-new array
-
-primes array first 5
-
-push into new array
-
 GenerateMultiplicationTs.prototype.output = function (){
    console.log("primes array")
    console.log(this.primesArray)
@@ -39,3 +33,25 @@ gm = new GenerateMultiplicationTs();
 gm.gMTables([2,3,5,7,11]);
 
 module.exports.GenerateMultiplicationTs = GenerateMultiplicationTs;
+
+var array = [2,3,5,7,11];
+var length = array.length
+
+var newArray = array.map(function(element){
+  counter = 1
+  while (length >= counter) {
+    array2 = new Array
+    for(i=1; i <= length; i++){
+      array2.push(element * i)
+    }
+    counter +=1
+  };
+  var array3 = new Array
+  array3.push(array2)
+  return array3;
+});
+
+console.log(array);
+console.log(newArray);
+
+newArray.unshift(array)
