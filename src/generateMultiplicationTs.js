@@ -8,8 +8,10 @@ GenerateMultiplicationTs.prototype.gMTables = function(primesArray){
       counter = 1
       while (length >= counter) {
       array = new Array
-      array.push(number * counter)
-      counter +=1
+      length times do
+         array.push(number * counter)
+      end
+    counter +=1
       // console.log(array)
     };
     primesArray.push(array)
