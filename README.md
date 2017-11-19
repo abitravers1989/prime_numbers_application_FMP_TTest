@@ -77,6 +77,8 @@ formatting the output.
 
 # My approach.
 
+
+
 1. Since this is test driven; workout testing framework to use.
 Settled with Jasmine as have used it before when building a javascript / node application. (I looked at when I have done this in the past).
 
@@ -85,6 +87,14 @@ Settled with Jasmine as have used it before when building a javascript / node ap
 3. Simple design - non-code breaking down responsibilities and potential relationships.
 
 4. Define my unknowns.
+
+START WORK ON THE EASIEST FUNCTIONALITY FIRST (get a good mental state going). Then after some part of the code is working - the check numbers functionality- then i put this in the controller.
+
+Then I moved on to trying to understand what prime numbers are and how to generate them. wrote the tests and code for this.
+
+Put this in the controller.
+
+Then moved on to designing and understanding how to generate the multiplication tables.
 
 <!-- 5. Unknowns included prime numbers / what actually to output. Since this seemed a very important part of the whole app I researched this before continuing.
 

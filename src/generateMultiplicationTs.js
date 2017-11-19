@@ -19,10 +19,14 @@ GenerateMultiplicationTs.prototype.gMTables = function(primesArray){
 
 
 function myFunction(primesArray) {
+  counter = 1
+  var length = primesArray.length
+
+while (length < counter) {
     primesArray.forEach((number)=> {
       array = new Array
-      counter = 1
-      while (primesArray.length < counter) {
+        console.log(counter)
+        console.log(primesArray.length)
       array.push(item * counter)
       counter +=1
     };
