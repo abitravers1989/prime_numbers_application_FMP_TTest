@@ -4,20 +4,19 @@ var GenerateMultiplicationTs = function(){
 
 GenerateMultiplicationTs.prototype.gMTables = function(primesArray){
   var length = primesArray.length
-    primesArray.forEach((number)=> {
-      counter = 1
-      while (length >= counter) {
+  primesArray.forEach((number)=> {
+    counter = 1
+    while (length >= counter) {
       array = new Array
-      length times do
-         array.push(number * counter)
-      end
-    counter +=1
-      // console.log(array)
+      for(i=1; i < length; i++){
+        array.push(number * i)
+      }
+      counter +=1
     };
     primesArray.push(array)
   });
-    this.primesArray = primesArray;
-    return this.primesArray;
+   this.primesArray = primesArray;
+   return this.primesArray;
 };
 
 gm = new GenerateMultiplicationTs();
