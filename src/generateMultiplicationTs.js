@@ -8,7 +8,7 @@ GenerateMultiplicationTs.prototype.gMTables = function(primesArray){
     counter = 1
     while (length >= counter) {
       array = new Array
-      for(i=1; i < length; i++){
+      for(i=0; i < length; i++){
         array.push(number * i)
       }
       counter +=1
@@ -17,6 +17,22 @@ GenerateMultiplicationTs.prototype.gMTables = function(primesArray){
   });
    this.primesArray = primesArray;
    return this.primesArray;
+};
+
+new array
+
+primes array first 5
+
+push into new array
+
+GenerateMultiplicationTs.prototype.output = function (){
+   console.log("primes array")
+   console.log(this.primesArray)
+   this.primesArray.forEach((array)=>{
+     array.forEach((num)=>{
+       console.log(num)
+     });
+   });
 };
 
 gm = new GenerateMultiplicationTs();
