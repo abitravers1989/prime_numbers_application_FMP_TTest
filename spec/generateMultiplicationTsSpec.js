@@ -11,21 +11,23 @@ describe ('generateMultiplicationTs', function(){
     multiplicationTables = new GenerateMultiplicationTs();
   });
 
-  it("IS given an array of prime numbers", function(){
-    multiplicationTables.primesarray
+  it("Is initalized with an empty array", function(){
+    expect(multiplicationTables.multiplicationTsArray).toEqual([])
   });
 
   it("Generates an array of multiplication tables for each of the numbers in the primes array passed to it.", function(){
-    expect(multiplicationTables.gMTables(inputPimesArray)).toEqual(expectedOutput)
+    multiplicationTables.addPrimesArrayToMTsArray(inputPimesArray)
+    expect(multiplicationTables.multiplicationTsArray).toEqual(expectedOutput)
   });
 
   it("Generates an array of multiplication tables for each of the numbers in the primes array passed to it.", function(){
-    expect(multiplicationTables.gMTables(inputPimesArray2)).toEqual(expectedOutput2)
+    multiplicationTables.addPrimesArrayToMTsArray(inputPimesArray2)
+    expect(multiplicationTables.multiplicationTsArray).toEqual(expectedOutput2)
   });
 
   it("The length of the multiplication table arrays is the same as length of the primes array passed to it.", function(){
-    var tables = multiplicationTables.gMTables(inputPimesArray)
-    expect(tables.size).toEqual(inputPimesArray.length)
+    multiplicationTables.addPrimesArrayToMTsArray(inputPimesArray)
+    expect(multiplicationTables.multiplicationTsArray.length).toEqual(6)
   });
 
 });
