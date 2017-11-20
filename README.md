@@ -57,11 +57,19 @@ I learnt how to generate a list of prime numbers with an algorithm. I have not d
 
 I understood how the information flowed through the programme.
 
-# What would you do if you had more time?
+I managed to generate an array of arrays which contained the multiplication tables of all the prime arrays. I implemented it using the map functionality. (It was harder and messier to do than in ruby. I feel ruby is better for looping logic / where there is potentially a lot of data.). The method is messy and needs refactoring but I got full visibility and understanding of the functionality and how important where you returned from the function was.(See all the console logs in the past commits).
+
+# What would you do if you had more time?/ IMPROVEMENTS
 
 controller.js
 
 Additional functionality; if the user input an invalid number it loops back to the start of the programme automatically, instead of user having to re-start it.
+
+
+gMTableslogic function in generateMultiplicationTas module:
+
+Too long needs refactoring.
+Tests need to test more scenarios / edge cases.
 
 # What was the key criteria?
 
