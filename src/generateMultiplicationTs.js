@@ -1,57 +1,63 @@
 var GenerateMultiplicationTs = function(){
-    this.primesArray = "unset";
+  this.multiplicationTsArray = new Array;
 };
 
-GenerateMultiplicationTs.prototype.gMTables = function(primesArray){
-  var length = primesArray.length
-  primesArray.forEach((number)=> {
+GenerateMultiplicationTs.prototype.gMTableslogic = function(primesArray){
+  var newArray = new Array
+  primesArray.map(function(element){
+    var length = primesArray.length
     counter = 1
     while (length >= counter) {
-      array = new Array
-      for(i=0; i < length; i++){
-        array.push(number * i)
+      array2 = new Array
+      for(i=1; i <= length; i++){
+        array2.push(element * i)
       }
       counter +=1
+      // console.log(array2)
+      newArray.push(array2);
+      // newArray.unshift(primesArray);
+      console.log(newArray);
+      return newArray;
     };
-    primesArray.push(array)
+    console.log(this.multiplicationTsArray);
+    console.log("does this ever get logged");
   });
-   this.primesArray = primesArray;
-   return this.primesArray;
-};
+  // this.multiplicationTsArray.unshift(primesArray);
+  console.log(this.multiplicationTsArray)
+  console.log("does this get logged")
+}
 
-GenerateMultiplicationTs.prototype.output = function (){
-   console.log("primes array")
-   console.log(this.primesArray)
-   this.primesArray.forEach((array)=>{
-     array.forEach((num)=>{
-       console.log(num)
-     });
-   });
+GenerateMultiplicationTs.prototype.displayMultiplicationTsArray = function(primesArray){
+  // this.gMTableslogic(primesArray);
+  console.log(primesArray)
+  console.log("hiiii")
 };
 
 gm = new GenerateMultiplicationTs();
-gm.gMTables([2,3,5,7,11]);
+gm.gMTableslogic([2,3,5,7,11]);
+// console.log(gm.multiplicationTsArray)
 
-module.exports.GenerateMultiplicationTs = GenerateMultiplicationTs;
+// module.exports.GenerateMultiplicationTs = GenerateMultiplicationTs;
 
-var array = [2,3,5,7,11];
-var length = array.length
-
-var newArray = array.map(function(element){
-  counter = 1
-  while (length >= counter) {
-    array2 = new Array
-    for(i=1; i <= length; i++){
-      array2.push(element * i)
-    }
-    counter +=1
-  };
-  var array3 = new Array
-  array3.push(array2)
-  return array3;
-});
-
-console.log(array);
-console.log(newArray);
-
-newArray.unshift(array)
+// var array = [2,3,5,7,11];
+// var length = array.length
+//
+// var newArray = array.map(function(element){
+//   var length = element.length
+//   counter = 1
+//   while (length >= counter) {
+//     array2 = new Array
+//     for(i=1; i <= length; i++){
+//       array2.push(element * i)
+//     }
+//     counter +=1
+//   };
+//   var array3 = new Array
+//   array3.push(array2)
+//   return array3;
+// });
+//
+// console.log(array);
+// console.log(newArray);
+//
+// newArray.unshift(array)
