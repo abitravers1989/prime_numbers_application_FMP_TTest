@@ -26,5 +26,5 @@ GenerateMultiplicationTs.prototype.addPrimesArrayToMTsArray = function(primesArr
 };
 
 gm = new GenerateMultiplicationTs();
-gm.addPrimesArrayToMTsArray([2,3,5,7,11])
+gm.addPrimesArrayToMTsArray([2,3,5])
 console.log(gm.multiplicationTsArray);
