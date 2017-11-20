@@ -13,28 +13,34 @@ GenerateMultiplicationTs.prototype.gMTableslogic = function(primesArray){
         array2.push(element * i)
       }
       counter +=1
-      // console.log(array2)
-      newArray.push(array2);
+      // newArray.push(array2);
       // newArray.unshift(primesArray);
-      console.log(newArray);
-      return newArray;
+      // console.log(newArray);
+      // return newArray;
     };
-    console.log(this.multiplicationTsArray);
-    console.log("does this ever get logged");
+    newArray.push(array2);
+    // return newArray;
+    // console.log(this.multiplicationTsArray);
+    // console.log("does this ever get logged");
   });
+  console.log(newArray)
+  this.multiplicationTsArray = newArray
+  return newArray;
   // this.multiplicationTsArray.unshift(primesArray);
-  console.log(this.multiplicationTsArray)
-  console.log("does this get logged")
+  // console.log(this.multiplicationTsArray)
+  // console.log("does this get logged")
 }
 
 GenerateMultiplicationTs.prototype.displayMultiplicationTsArray = function(primesArray){
-  // this.gMTableslogic(primesArray);
+  this.multiplicationTsArray = this.gMTableslogic(primesArray);
   console.log(primesArray)
   console.log("hiiii")
 };
 
 gm = new GenerateMultiplicationTs();
 gm.gMTableslogic([2,3,5,7,11]);
+// gm.displayMultiplicationTsArray
+console.log(gm.multiplicationTsArray);
 // console.log(gm.multiplicationTsArray)
 
 // module.exports.GenerateMultiplicationTs = GenerateMultiplicationTs;
