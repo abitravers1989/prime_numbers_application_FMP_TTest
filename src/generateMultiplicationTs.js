@@ -7,9 +7,9 @@ GenerateMultiplicationTs.prototype.gMTableslogic = function(primesArray){
   primesArray.map(function(element){
     var length = primesArray.length
     counter = 1
-    while (length >= counter) {
+    while ((length+1) >= counter) {
       array2 = new Array
-      for(i=1; i <= length; i++){
+      for(i=1; i <= (length+1); i++){
         array2.push(element * i)
       }
       counter +=1
@@ -22,12 +22,13 @@ GenerateMultiplicationTs.prototype.gMTableslogic = function(primesArray){
 
 GenerateMultiplicationTs.prototype.addPrimesArrayToMTsArray = function(primesArray){
   this.gMTableslogic(primesArray);
+  primesArray.unshift(null);
   this.multiplicationTsArray.unshift(primesArray)
 };
 
 module.exports.GenerateMultiplicationTs = GenerateMultiplicationTs;
 
-//
-// gm = new GenerateMultiplicationTs();
-// gm.addPrimesArrayToMTsArray([2,3,5])
-// console.log(gm.multiplicationTsArray);
+
+gm = new GenerateMultiplicationTs();
+gm.addPrimesArrayToMTsArray([2, 3, 5])
+console.log(gm.multiplicationTsArray);
