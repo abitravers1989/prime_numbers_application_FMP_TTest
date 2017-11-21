@@ -192,10 +192,10 @@ Just doing unit tests and other tests in the console / by running the file ... W
 
 # Research
 
-Understanding modules:
-https://www.youtube.com/watch?v=SEQ1SjXzAds
-http://www.tutorialsteacher.com/nodejs/nodejs-module-exports https://www.sitepoint.com/understanding-module-exports-exports-node-js/
-https://www.youtube.com/watch?v=SmBb2SSZqFU
+Generating an output table to STDOUT:
+https://blog.nodejitsu.com/npmawesome-table-formatting-in-the-terminal-with-cli-tables/
+
+
 
 Infinity:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
