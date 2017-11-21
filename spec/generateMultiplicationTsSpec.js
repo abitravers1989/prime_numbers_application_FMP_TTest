@@ -9,7 +9,7 @@ describe ('generateMultiplicationTs', function(){
   [ 11, 22, 33, 44, 55, 66 ] ]
 
   const inputPimesArray2 = [2,3,5];
-  const expectedOutput2 = [ [ 2, 3, 5 ], [ 2, 4, 6 ], [ 3, 6, 9 ], [ 5, 10, 15 ] ]
+  const expectedOutput2 = [ [ null, 2, 3, 5 ], [ 2, 4, 6 , 8], [ 3, 6, 9, 15 ], [ 5, 10, 15, 20 ] ]
 
   beforeEach(function(){
     multiplicationTables = new GenerateMultiplicationTs();
