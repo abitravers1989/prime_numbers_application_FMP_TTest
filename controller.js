@@ -6,6 +6,8 @@ const checkInput = new CheckInput();
 const readline = require('readline');
 const GeneratePrimes = require('./src/generatePrimes').GeneratePrimes;
 const generatePrimes = new GeneratePrimes();
+const GenerateMultiplicationTs = require('./src/generateMultiplicationTs').GenerateMultiplicationTs;
+const gMTs = new GenerateMultiplicationTs();
 
 
 // Creating an instance of the readline class.
@@ -21,9 +23,9 @@ var runApplication = function(){
     if (checkInput.validNumber(userInput)){
      console.log("valid");
      generatePrimes.createArrayofPrimes(userInput)
-     console.log(generatePrimes.primesarray)
-     // cons = new CheckInput
-     // cons.validNumber(100);
+     // console.log(generatePrimes.primesarray)
+     gMTs.addPrimesArrayToMTsArray(generatePrimes.primesarray);
+     console.log(gMTs.multiplicationTsArray);
     rl.close();
     }
   // rl.close();
