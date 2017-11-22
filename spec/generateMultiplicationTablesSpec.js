@@ -3,7 +3,7 @@ describe ('generateMultiplicationTables', function(){
   const inputPimesArray = [2, 3, 5, 7, 11];
 
 
-  const expectedOutput = [ [ null, 2, 3, 5, 7, 11 ],
+  const expectedOutput = [ [ '-', 2, 3, 5, 7, 11 ],
   [ 2, 4, 6, 8, 10, 12 ],
   [ 3, 6, 9, 12, 15, 18 ],
   [ 5, 10, 15, 20, 25, 30 ],
@@ -12,7 +12,7 @@ describe ('generateMultiplicationTables', function(){
 
   const inputPimesArray2 = [2, 3, 5];
 
-  const expectedOutput2 = [ [ null, 2, 3, 5 ],
+  const expectedOutput2 = [ [ '-', 2, 3, 5 ],
   [ 2, 4, 6, 8 ],
   [ 3, 6, 9, 12 ],
   [ 5, 10, 15, 20 ] ]

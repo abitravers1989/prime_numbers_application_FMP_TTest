@@ -22,7 +22,7 @@ GenerateMultiplicationTables.prototype.gMTableslogic = function(primesArray){
 
 generateMultiplicationTables.prototype.addPrimesArrayToMTsArray = function(primesArray){
   this.gMTableslogic(primesArray);
-  primesArray.unshift(null);
+  primesArray.unshift('-');
   this.multiplicationTsArray.unshift(primesArray)
 };
 
