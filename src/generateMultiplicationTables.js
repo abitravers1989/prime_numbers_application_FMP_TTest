@@ -1,11 +1,11 @@
-var GenerateMultiplicationTs = function(){
+var generateMultiplicationTables = function(){
   this.multiplicationTsArray = new Array;
 };
 
-GenerateMultiplicationTs.prototype.gMTableslogic = function(primesArray){
+GenerateMultiplicationTables.prototype.gMTableslogic = function(primesArray){
   var newArray = new Array
+  var length = primesArray.length
   primesArray.map(function(element){
-    var length = primesArray.length
     counter = 1
     while ((length+1) >= counter) {
       array2 = new Array
@@ -20,15 +20,15 @@ GenerateMultiplicationTs.prototype.gMTableslogic = function(primesArray){
   return newArray;
 };
 
-GenerateMultiplicationTs.prototype.addPrimesArrayToMTsArray = function(primesArray){
+generateMultiplicationTables.prototype.addPrimesArrayToMTsArray = function(primesArray){
   this.gMTableslogic(primesArray);
   primesArray.unshift(null);
   this.multiplicationTsArray.unshift(primesArray)
 };
 
-module.exports.GenerateMultiplicationTs = GenerateMultiplicationTs;
+module.exports.generateMultiplicationTables = generateMultiplicationTables;
 
 
-gm = new GenerateMultiplicationTs();
+gm = new generateMultiplicationTables();
 gm.addPrimesArrayToMTsArray([2, 3, 5])
 console.log(gm.multiplicationTsArray);

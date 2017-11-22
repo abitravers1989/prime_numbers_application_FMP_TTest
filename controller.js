@@ -6,8 +6,8 @@ const checkInput = new CheckInput();
 const readline = require('readline');
 const GeneratePrimes = require('./src/generatePrimes').GeneratePrimes;
 const generatePrimes = new GeneratePrimes();
-const GenerateMultiplicationTs = require('./src/generateMultiplicationTs').GenerateMultiplicationTs;
-const gMTs = new GenerateMultiplicationTs();
+const generateMultiplicationTables = require('./src/generateMultiplicationTables').generateMultiplicationTables;
+const gMTs = new generateMultiplicationTables();
 
 
 // Creating an instance of the readline class.
