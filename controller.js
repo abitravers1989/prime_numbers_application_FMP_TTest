@@ -8,6 +8,7 @@ const GeneratePrimes = require('./src/generatePrimes').GeneratePrimes;
 const generatePrimes = new GeneratePrimes();
 const GenerateMultiplicationTables = require('./src/generateMultiplicationTables').GenerateMultiplicationTables;
 const gMTs = new GenerateMultiplicationTables();
+var Table = require('easy-table')
 
 
 // Creating an instance of the readline class.
@@ -25,7 +26,8 @@ var runApplication = function(){
      generatePrimes.createArrayofPrimes(userInput)
      // console.log(generatePrimes.primesarray)
      gMTs.addPrimesArrayToMTsArray(generatePrimes.primesarray);
-     console.log(gMTs.multiplicationTsArray);
+     // console.log(gMTs.multiplicationTsArray);
+     console.log(Table.print(gMTs.multiplicationTsArray))
     rl.close();
     }
   // rl.close();
