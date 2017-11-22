@@ -29,7 +29,10 @@ var runApplication = function(){
      // console.log(gMTs.multiplicationTsArray);
      console.log(Table.print(gMTs.multiplicationTsArray))
     rl.close();
-    }
+  } else {
+     console.log("Sorry that number doesn't work, please enter one which is higher than 1 but not a decimal.");
+     runApplication();
+  }
   // rl.close();
  });
 }

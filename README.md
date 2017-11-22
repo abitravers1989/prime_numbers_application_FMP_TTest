@@ -66,6 +66,10 @@ controller.js
 Additional functionality; if the user input an invalid number it loops back to the start of the programme automatically, instead of user having to re-start it.
 
 
+Unsure how to test controllers output.
+- Or if need to test it because it is using easy table which wasn't built by myself.
+
+
 gMTableslogic function in generateMultiplicationTas module:
 
 Too long needs refactoring.
