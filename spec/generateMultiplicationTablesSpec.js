@@ -18,7 +18,7 @@ describe ('generateMultiplicationTables', function(){
   [ 5, 10, 15, 20 ] ]
 
   beforeEach(function(){
-    multiplicationTables = new generateMultiplicationTables();
+    multiplicationTables = new GenerateMultiplicationTables();
   });
 
   it("Is initalized with an empty array", function(){
