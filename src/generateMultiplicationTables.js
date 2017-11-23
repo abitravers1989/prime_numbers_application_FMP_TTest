@@ -29,8 +29,3 @@ GenerateMultiplicationTables.prototype.addPrimesArrayToMTsArray = function(prime
 };
 
 module.exports.GenerateMultiplicationTables = GenerateMultiplicationTables;
-
-
-// gm = new GenerateMultiplicationTables();
-// gm.addPrimesArrayToMTsArray([2, 3, 5, 7, 11])
-// console.log(gm.multiplicationTsArray);
