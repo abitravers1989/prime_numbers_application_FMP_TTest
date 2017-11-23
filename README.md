@@ -17,7 +17,7 @@ The number given by the user must be between 1 and most be finite. It must be a 
 
 ## Demonstration of the app working:
 
-![Using the App Demo ](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/first_design.jpg)
+![Using the App Demo ](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/WorkingPrimesApp.gif)
 
 
 ## How Do I run it myself?
