@@ -1,4 +1,4 @@
-# What is this application?
+## What is this application?
 
 A node.js application which runs in the terminal.
 
@@ -15,10 +15,10 @@ In this example the first 4 prime numbers, (so 2, 3, 5, 7) first 5 times tables 
 
 The number given by the user must be between 1 and most be finite. It must be a whole number.
 
-# Demonstration of the app working:
+## Demonstration of the app working:
 
 
-# How Do I run it myself?
+## How Do I run it myself?
 
 1st install Node.js if you haven't already.
 
@@ -56,7 +56,7 @@ node controller.js
 Enter the number of primes you want and wait for the magic to happen!!
 
 
-# How can I test it?
+## How can I test it?
 
 First make sure you have jasmine installed:
 
@@ -69,7 +69,7 @@ $npm install -g jasmine
 To run it open the specRunner.html file in your browser.
 
 
-# What language is it in? And What design pattern have you followed?
+## What language is it in? And What design pattern have you followed?
 
 The language of the code is Javascript.
 
@@ -80,7 +80,7 @@ The testing framework was Jasmine.
 I have used Jasmine for unit tests before and liked the amount of information it provides when a test is failing.
 
 
-# How did I design/ structure the code?
+## How did I design/ structure the code?
 
 Constructor-prototype Javascript design pattern was used. I like this design pattern because it allows you to encapsulate responsibilities within modules then export them so their functionality can be used, but not changed, throughout the rest of the programme.
 
@@ -101,7 +101,7 @@ GenerateMultiplicationTables:
 - It is responsible for taking that primes array and calculating the times tables of these prime numbers. It outputs a 2D array containing these plus the original prime numbers array.
 
 
-# Generating Prime module (my thinking / approach)
+## Generating Prime module (my thinking / approach)
 
 
 Testing helped me with this as I started by writing out lists of prime numbers in the tests. This allowed me to get a feel for what the prime numbers were.
@@ -115,7 +115,7 @@ I then tried to create my own prime number finder method. I started by checking 
 This was super slow and unnecessary and I wasn't sure that it accounted for all primes. So I used this to create a new one: (http://studymaths.co.uk/topics/checkIfPrime.php).
 
 
-# What did you do with it that you are pleased about?
+## What did you do with it that you are pleased about?
 
 
 I understood how the information flowed through the programme. I could see how to clearly separate out functionality.
@@ -127,7 +127,7 @@ I managed to create an array of arrays in javascript.
 I used the prototype design functionality properly.
 
 
-# Improvements
+## Improvements
 
 The generate multiplication table needs to be refactored. I need to separate out the functionality better, the encapsulation is currently incorrect. One function should loop through the array calling another function to generate the multiplication table for that number.
 
@@ -136,7 +136,7 @@ The table output could be more attractive. Instead of using easy table and the c
 Possible edge cases could be added to the tests for generate primes and multiplication tables. At the moment I have not done this because I am assuming the checkInput functionality / tests are filtering out most of these cases.
 
 
-# My approach.
+## My approach.
 
 
 1. Since this is test driven; workout testing framework to use.
@@ -160,7 +160,7 @@ Design the first part if the programme:
 9. I called all these modules in the controller class and started to visualise the flow of information. In the controller I format the output into a table with easy-table.
 
 
-# Research
+## Research
 
 Generating an output table to STDOUT:
 https://blog.nodejitsu.com/npmawesome-table-formatting-in-the-terminal-with-cli-tables/
