@@ -17,6 +17,8 @@ The number given by the user must be between 1 and most be finite. It must be a 
 
 ## Demonstration of the app working:
 
+![Using the App Demo ](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/first_design.jpg)
+
 
 ## How Do I run it myself?
 
@@ -147,9 +149,6 @@ Settled with Jasmine as have used it before when building a javascript / node ap
 4. Define my unknowns.
 
 5. Started to work on the easiest functionality first, my knowns. Checking the input number.
-
-Design the first part if the programme:
-![Design Example / Thinking](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/first_design.jpg)
 
 6. I then moved onto my first unknown,  getting input from the commandline with node. It turns out this wasn't as difficult as I thought.
 
