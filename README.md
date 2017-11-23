@@ -69,7 +69,6 @@ $npm install -g jasmine
 To run it open the specRunner.html file in your browser.
 
 
-
 # What language is it in? And What design pattern have you followed?
 
 The language of the code is Javascript.
@@ -83,12 +82,15 @@ I have used Jasmine for unit tests before and liked the amount of information it
 
 # How did I design/ structure the code?
 
-Constructor-prototype Javascript design pattern was used.  
+Constructor-prototype Javascript design pattern was used. I like this design pattern because it allows you to encapsulate responsibilities within modules then export them so their functionality can be used, but not changed, throughout the rest of the programme.
 
 Each module has been separated into its own file. This was done in an attempt to separate out concerns. Each constructor has it's own unique responsibility:
 
 Controller:
- - It is responsible for all the command line stuff. For taking input from the user, calling the other classes, then outputting the table to the command line.
+ - It is responsible for all the command line stuff. For taking input from the user, calling the other classes, then outputting the table to the command line. It creates new instances of the modules in the rest of the programme.
+
+CheckInput:
+- It is responsible for checking the validity of the number given by the user. It makes sure a whole number above one but below infinity is passed to the rest of the programme.
 
 GeneratePrimes:
 
@@ -97,8 +99,6 @@ GeneratePrimes:
 GenerateMultiplicationTables:
 
 - It is responsible for taking that primes array and calculating the times tables of these prime numbers. It outputs a 2D array containing these plus the original prime numbers array.
-
-
 
 
 # The information flow through the app
