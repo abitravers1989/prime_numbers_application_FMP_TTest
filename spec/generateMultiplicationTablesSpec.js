@@ -18,26 +18,27 @@ describe ('generateMultiplicationTables', function(){
   [ 5, 10, 15, 20 ] ]
 
   beforeEach(function(){
-    multiplicationTables = new GenerateMultiplicationTables();
+    multiplicationTableGenerator = new GenerateMultiplicationTables();
   });
 
   it("Is initalized with an empty array", function(){
-    expect(multiplicationTables.multiplicationTsArray).toEqual([])
+    expect(multiplicationTableGenerator.multiplicationTsArray).toEqual([])
   });
 
   it("Generates an array of multiplication tables for each of the numbers in the primes array passed to it.", function(){
-    multiplicationTables.addPrimesArrayToMTsArray(inputPimesArray)
-    expect(multiplicationTables.multiplicationTsArray).toEqual(expectedOutput)
+    multiplicationTableGenerator.addPrimesArrayToMTsArray(inputPimesArray)
+    expect(multiplicationTableGenerator.multiplicationTsArray).toEqual(expectedOutput)
   });
 
   it("Generates an array of multiplication tables for each of the numbers in the primes array passed to it.", function(){
-    multiplicationTables.addPrimesArrayToMTsArray(inputPimesArray2)
-    expect(multiplicationTables.multiplicationTsArray).toEqual(expectedOutput2)
+    multiplicationTableGenerator.addPrimesArrayToMTsArray(inputPimesArray2)
+    expect(multiplicationTableGenerator.multiplicationTsArray).toEqual(expectedOutput2)
   });
 
-  it("The length of the multiplication table arrays is the same as length of the primes array passed to it.", function(){
-    multiplicationTables.addPrimesArrayToMTsArray(inputPimesArray)
-    expect(multiplicationTables.multiplicationTsArray.length).toEqual(7)
+  it("The length of the multiplication table arrays is the length+1 of the primes array passed to it.", function(){
+    const inputPrimeArrLength = inputPimesArray.length;
+    multiplicationTableGenerator.addPrimesArrayToMTsArray(inputPimesArray);
+    expect(multiplicationTableGenerator.multiplicationTsArray.length).toEqual(inputPrimeArrLength + 1);
   });
 
 });
