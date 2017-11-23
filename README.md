@@ -87,7 +87,7 @@ Constructor-prototype Javascript design pattern was used. I like this design pat
 Each module has been separated into its own file. This was done in an attempt to separate out concerns. Each constructor has it's own unique responsibility:
 
 Controller:
- - It is responsible for all the command line stuff. For taking input from the user, calling the other classes, then outputting the table to the command line. It creates new instances of the modules in the rest of the programme.
+ - It is responsible for all the command line stuff. For taking input from the user, calling the other classes, then outputting the table to the command line. It formats the output into a table using the node module easy table.
 
 CheckInput:
 - It is responsible for checking the validity of the number given by the user. It makes sure a whole number above one but below infinity is passed to the rest of the programme.
@@ -101,162 +101,70 @@ GenerateMultiplicationTables:
 - It is responsible for taking that primes array and calculating the times tables of these prime numbers. It outputs a 2D array containing these plus the original prime numbers array.
 
 
-# The information flow through the app
+# Generating Prime module (my thinking / approach)
 
-The controller file gets the number from the user. It does this through asking the user to input a number in the console.
 
-It then creates a new instance of the check Number module. Which checks the number is valid and fits the given criteria.
+Testing helped me with this as I started by writing out lists of prime numbers in the tests. This allowed me to get a feel for what the prime numbers were.
 
-The controller then creates a new instance of the generate primes module. This module will generate an array of the first N(where N is the number input) prime numbers.
+I first wrote the method in sudo code.
 
-Next a new instance of the multiplication generator is called.
-This generates the multiplication tables......
+I wanted it to loop through from 2(the first prime) generating prime numbers, storing them in an array, until it had the same amount of prime numbers as the number provided to it.
 
-Table formatter ...
+I then tried to create my own prime number finder method. I started by checking the provided number's(which has been supplied to it by the function which is looping through / counting all numbers from 2) divisibility by 2, 3, then 6 and 7. I stopped it at the square root of the number (because according to google that's what you are supposed to do).
 
-output
-
-# Generating Prime module explained.
-
-<!-- I have modelled this on the 'sieve of Eratosthenes Algorithm'. -->
-
-1 is not a prime number so it starts with 2.
-
-Testing helped me with this as I started by writing out lists of prime numbers in the tests. These lists contained the same number of prime numbers as the number passed to it when calling the function. This allowed me to get a feel for what the prime numbers were.
-
-I first wrote the method in sudo code. I wanted it to loop through from 2(the first prime) generating prime numbers, storing them in an array, until it had the same amount of prime numbers as the number provided to it. For this i knew I needed to check the length of the primes array.
-
-I then tried to create my own prime number finder method. I started by checking the provided number's(which has been supplied to it by the function which is looping through / counting all numbers from 2) divisibility by 2, 3, then 6 and 7. I stopped it at the square root of the number. This was super slow and unnecessary and I wasn't sure that it accounted for all primes. So I used this to create a new one: (http://studymaths.co.uk/topics/checkIfPrime.php).
+This was super slow and unnecessary and I wasn't sure that it accounted for all primes. So I used this to create a new one: (http://studymaths.co.uk/topics/checkIfPrime.php).
 
 
 # What did you do with it that you are pleased about?
 
-I learnt how to generate a list of prime numbers with an algorithm. I have not done maths since A level Chemistry which was a long time ago for me.
 
-I understood how the information flowed through the programme.
+I understood how the information flowed through the programme. I could see how to clearly separate out functionality.
 
-I managed to generate an array of arrays which contained the multiplication tables of all the prime arrays. I implemented it using the map functionality. (It was harder and messier to do than in ruby. I feel ruby is better for looping logic / where there is potentially a lot of data.). The method is messy and needs refactoring but I got full visibility and understanding of the functionality and how important where you returned from the function was.(See all the console logs in the past commits).
+Doing it test first really helped with design and understanding what that part of the programme needed to do.
 
-# What would you do if you had more time?/ IMPROVEMENTS
+I managed to create an array of arrays in javascript.
 
-controller.js
-
-Additional functionality; if the user input an invalid number it loops back to the start of the programme automatically, instead of user having to re-start it.
+I used the prototype design functionality properly.
 
 
-Unsure how to test controllers output.
-- Or if need to test it because it is using easy table which wasn't built by myself.
+# Improvements
 
+The generate multiplication table needs to be refactored. I need to separate out the functionality better, the encapsulation is currently incorrect. One function should loop through the array calling another function to generate the multiplication table for that number.
 
-gMTableslogic function in generateMultiplicationTas module:
+The table output could be more attractive. Instead of using easy table and the command-line, I would use a HTML file (styled with CSS) to output a more attractive table to the browser.
 
-Too long needs refactoring.
-Tests need to test more scenarios / edge cases.
-
+Possible edge cases could be added to the tests for generate primes and multiplication tables. At the moment I have not done this because I am assuming the checkInput functionality / tests are filtering out most of these cases.
 
 
 # My approach.
 
 
-
 1. Since this is test driven; workout testing framework to use.
-Settled with Jasmine as have used it before when building a javascript / node application. (I looked at when I have done this in the past).
+Settled with Jasmine as have used it before when building a javascript / node application.
 
-2. Define MVP.
-
-3. Simple design - non-code breaking down responsibilities and potential relationships.
+2. Wrote out in english the information flow through the programme then diagrammed this.
 
 4. Define my unknowns.
 
-START WORK ON THE EASIEST FUNCTIONALITY FIRST (get a good mental state going). Then after some part of the code is working - the check numbers functionality- then i put this in the controller.
-
-Then I moved on to trying to understand what prime numbers are and how to generate them. wrote the tests and code for this.
-
-Put this in the controller.
-
-Then moved on to designing and understanding how to generate the multiplication tables.
-
-<!-- 5. Unknowns included prime numbers / what actually to output. Since this seemed a very important part of the whole app I researched this before continuing.
-
-6. Writing a Javascript application which works in the console. Taking user input from stdin and outputting a table of prime numbers back to the console.
-So the next thing I looking into was how to create a command line application in node.js.
-
-7. Had to think about how to render this and have it running in the command line.  -->
+5. Started to work on the easiest functionality first, my knowns. Checking the input number.
 
 Design the first part if the programme:
 ![Design Example / Thinking](https://github.com/abitravers1989/prime_numbers_application_FMP_TTest/blob/master/public/first_design.jpg)
 
+6. I then moved onto my first unknown,  getting input from the commandline with node. It turns out this wasn't as difficult as I thought.
 
-Decided to start with the functionality/ repo responsible for checking the input number since this was a known and I could start coding before trying to understand how to get user input from the console:
+7. Next I did some research on prime numbers and how to generate them. Wrote the tests then the functionality for this.
 
-Created the information story for this class / functionality/ repo:
+8. I wrote the tests for the generating multiplication tables functionality. Doing this allowed me to visualise the output for this class, and that it would be a 2D array. I researched this plus some methods like reduce and map. I wrote an ugly but working functionality. Then attempted to refactor.
 
+9. I called all these modules in the controller class and started to visualise the flow of information. In the controller I format the output into a table with easy-table.
 
--  1st be passed the number which has been input by the user.
-- 2nd check the input number against the given criteria.
-- 3rd After checks are done either pass an error message to the function responsible for console in and output, or pass the number to the function responsible for calculating if it is prime.
-
-Used this to write the tests.
-
-Then wrote the code.
-
-I tested the code with; the unit tests, running parts of it in the console, and by running the specific file (checkInput.js) in the terminal and calling an instance of the class with it. If you want to replicate this, add the following to the bottom of the checkInput.js file:
-
-```````
-checkInput = new CheckInput();
-checkInput.validNumber(8)
-checkInput.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
-
-checkInput.validNumber("nnn")
-checkInput.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
-
-checkInput.validNumber(9.888)
-checkInput.inputNrCorrect
-console.log(checkInput.inputNrCorrect)
-
-```````
-
-Then open the terminal and run:
-
-``````
-$node checkInput.js
-``````
-
-I went about creating all the other modules and functionality with the same process.
-
-
-
-
-
-Further Tests to add:
-
-Navigate to app directory, run eslint {folder name} to run the linter
-Navigate to app directory, run istanbul cover {test file} to check code coverage..
-
-
-
-
-
-
-
-
-
-
-# Unit Test
-
-Taking a unit of code and making sure it works in a repeatable / replicable way.
-
-Just doing unit tests and other tests in the console / by running the file ... WHY .ANSWER please me
 
 # Research
 
 Generating an output table to STDOUT:
 https://blog.nodejitsu.com/npmawesome-table-formatting-in-the-terminal-with-cli-tables/
-
-
-
+s
 Infinity:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 
