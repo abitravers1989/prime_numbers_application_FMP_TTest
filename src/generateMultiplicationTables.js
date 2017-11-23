@@ -3,14 +3,13 @@ var GenerateMultiplicationTables = function(){
 };
 
 GenerateMultiplicationTables.prototype._iterateThroughPrimesArray = function (primesArray){
-  // Takes in the primes array and interates through, generating the multiplication tables, where the output is an array of arrays
   const newArray = new Array
-  const tableLength = primesArray.length;
+  const tableLength = (primesArray.length+1);
   primesArray.map(function(element){
     counter = 1
-    while ((tableLength+1) >= counter) {
+    while ((tableLength) >= counter) {
       array2 = new Array
-      for(i=1; i <= (tableLength+1); i++){
+      for(i=1; i <= (tableLength); i++){
         array2.push(element * i)
       }
       counter +=1
