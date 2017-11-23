@@ -10,7 +10,6 @@ describe ('generatePrime', function(){
   });
 
   it("Generated an array of prime numbers which is as long as the number passed to it. (The input number).", function(){
-    // generatePrime.createArrayofPrimes(2)
     expect(generatePrime.createArrayofPrimes(2)).toEqual([2, 3])
   });
 
