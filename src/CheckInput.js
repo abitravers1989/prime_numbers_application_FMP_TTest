@@ -1,18 +1,14 @@
-// This repo/ function will: 1st be passed the number which has been input by the user.
-// 2nd check the input number against the given criteria.
-// 3rd It will return true or false depending on passing or failing the criteria.
-
 var CheckInput = function() {
   this.inputNrCorrect = false;
 };
 
-// checking it is not a string
-CheckInput.prototype.isString = function (userInput){
+
+CheckInput.prototype._isNotString = function (userInput){
   if (isNaN(userInput)) this.inputNrCorrect = false;
 };
 
 CheckInput.prototype.validNumber = function (userInput){
-   this.isString(userInput);
+   this._isNotString(userInput);
    if ( (userInput >= 1) && ((userInput%1) == 0) && (isFinite(userInput) === true)) this.inputNrCorrect = true;
    return this.inputNrCorrect
 };
