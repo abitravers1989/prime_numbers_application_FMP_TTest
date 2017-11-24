@@ -109,26 +109,6 @@ GenerateMultiplicationTables:
 - It is responsible for taking that primes array and calculating the times tables of these prime numbers. It outputs a 2D array containing these plus the original prime numbers array.
 
 
-## Generating Prime module (my thinking / approach)
-
-
-Testing helped me with this as I started by writing out lists of prime numbers in the tests. This allowed me to get a feel for what the prime numbers were.
-
-I first wrote the method in sudo code.
-
-The functionality needed to loop through a list of numbers checking if each is prime, stopping when it returned the same number of primes as the number which had been passed to it.
-
-I started with trail division, checking each number was divisible by 2, 3 etc.
-
-Testing allowed me to see just how inefficient this was. When I gave a large number it took a long time for the tests to load / run. This meant I needed to optimise my isPrime method. I decided to use the Sieve of Eratosthenes for this, as according to google, this is the easiest.
-
-Following this tutorial:
-
-https://www.youtube.com/watch?v=eKp56OLhoQs,
-
-I
-
-
 ## What did you do with it that you are pleased about?
 
 

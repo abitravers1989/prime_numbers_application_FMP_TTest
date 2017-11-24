@@ -12,6 +12,7 @@ GeneratePrimes.prototype._isPrime = function(n){
   return isPrime;
 };
 
+
 GeneratePrimes.prototype.createArrayofPrimes = function (inputNumber) {
   var number = 2;
   while(this.primesarray.length < inputNumber) {
