@@ -60,15 +60,21 @@ Enter the number of primes you want and wait for the magic to happen!!
 
 ## How can I test it?
 
-First make sure you have jasmine installed:
+Jasmine should have downloaded when you ran npm install.
+
+Either open the:
+
+`````
+specRunner.html
+`````
+
+file in your browser.
+
+Or open it in your terminal:
 
 ``````
-$npm install -g jasmine
+$open specRunner.html
 ``````
-(Information on how to downlaod jasmine also found here; https://jasmine.github.io/pages/getting_started.html).
-
-
-To run it open the specRunner.html file in your browser.
 
 
 ## What language is it in? And What design pattern have you followed?
@@ -110,11 +116,17 @@ Testing helped me with this as I started by writing out lists of prime numbers i
 
 I first wrote the method in sudo code.
 
-I wanted it to loop through from 2(the first prime) generating prime numbers, storing them in an array, until it had the same amount of prime numbers as the number provided to it.
+The functionality needed to loop through a list of numbers checking if each is prime, stopping when it returned the same number of primes as the number which had been passed to it.
 
-I then tried to create my own prime number finder method. I started by checking the provided number's(which has been supplied to it by the function which is looping through / counting all numbers from 2) divisibility by 2, 3, then 6 and 7. I stopped it at the square root of the number (because according to google that's what you are supposed to do).
+I started with trail division, checking each number was divisible by 2, 3 etc.
 
-This was super slow and unnecessary and I wasn't sure that it accounted for all primes. So I used this to create a new one: (http://studymaths.co.uk/topics/checkIfPrime.php).
+Testing allowed me to see just how inefficient this was. When I gave a large number it took a long time for the tests to load / run. This meant I needed to optimise my isPrime method. I decided to use the Sieve of Eratosthenes for this, as according to google, this is the easiest.
+
+Following this tutorial:
+
+https://www.youtube.com/watch?v=eKp56OLhoQs,
+
+I
 
 
 ## What did you do with it that you are pleased about?
@@ -127,6 +139,12 @@ Doing it test first really helped with design and understanding what that part o
 I managed to create an array of arrays in javascript.
 
 I used the prototype design functionality properly.
+
+I used TDD, I wrote tests, then wrote functionality which wasn't optimal, got the tests to pass, then went back and improved the functionality.
+
+I spent a lot of time trying to make the code and tests easy to read and follow.
+
+This is best application I have written so far and am pretty proud of it.
 
 
 ## Improvements
