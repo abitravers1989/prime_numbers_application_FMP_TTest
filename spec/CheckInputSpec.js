@@ -13,7 +13,7 @@ describe("checkInput", function (){
 
 // Although don't need to test this as it is a private function
   it("Checks the User Number is not a string. It returns false if it is a string.", function(){
-    checkInput._isNotString("not-number");
+    checkInput.validNumber("not-number");
     expect(checkInput.inputNrCorrect).toEqual(false);
   });
 
