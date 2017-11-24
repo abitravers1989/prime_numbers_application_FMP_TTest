@@ -2,7 +2,7 @@ var GenerateMultiplicationTables = function(){
   this.multiplicationTsArray = [];
 };
 
-GenerateMultiplicationTables.prototype._iterateThroughPrimesArray = function (primesArray){
+GenerateMultiplicationTables.prototype._calculateMultiplicationTablesofPrimes = function (primesArray){
   const newArray = new Array
   const tableLength = (primesArray.length+1);
   primesArray.map(function(element){
@@ -22,7 +22,7 @@ GenerateMultiplicationTables.prototype._iterateThroughPrimesArray = function (pr
 
 
 GenerateMultiplicationTables.prototype.addPrimesArrayToMTsArray = function(primesArray){
-  this._iterateThroughPrimesArray(primesArray);
+  this._calculateMultiplicationTablesofPrimes(primesArray);
   primesArray.unshift('-');
   this.multiplicationTsArray.unshift(primesArray)
 };
