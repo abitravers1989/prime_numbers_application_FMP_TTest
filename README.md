@@ -124,10 +124,10 @@ I used TDD, I wrote tests, then wrote functionality which wasn't optimal, got th
 
 I spent a lot of time trying to make the code and tests easy to read and follow.
 
-This is best application I have written so far and am pretty proud of it.
-
 
 ## Improvements
+
+Primes generator needs optimising for speed. At the moment it uses trial devision which means when tested against large numbers it is slow. I would use the sieve of Eratosthenes to do this optimisation.
 
 The generate multiplication table needs to be refactored. I need to separate out the functionality better, the encapsulation is currently incorrect. One function should loop through the array calling another function to generate the multiplication table for that number.
 
