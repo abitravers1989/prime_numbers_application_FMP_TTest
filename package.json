@@ -2,7 +2,7 @@
   "name": "prime_numbers_generator",
   "version": "1.0.0",
   "description": "A console application which given a number, N, outputs a table of the first N number of Prime Numbers.",
-  "main": "index.js",
+  "main": "controller.js",
   "scripts": {
     "test": "jasmine",
     "start": "node server.js"
