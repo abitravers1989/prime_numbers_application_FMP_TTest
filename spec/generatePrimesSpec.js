@@ -28,4 +28,44 @@ describe ('generatePrime', function(){
     expect(generatePrime.primesarray.length).toEqual(20000)
   });
 
+  it("The isPrime method returns false for 0", function(){
+    result = generatePrime._isPrime(0)
+    expect(result).toEqual(false)
+  });
+
+  it("The isPrime method returns false for 1", function(){
+    result = generatePrime._isPrime(1)
+    expect(result).toEqual(false)
+  });
+
+  it("The isPrime method returns true for 2", function(){
+    result = generatePrime._isPrime(2)
+    expect(result).toEqual(true)
+  });
+
+  it("The isPrime method returns true for 3", function(){
+    result = generatePrime._isPrime(3)
+    expect(result).toEqual(true)
+  });
+
+  it("The isPrime method returns false for 4", function(){
+    result = generatePrime._isPrime(4)
+    expect(result).toEqual(false)
+  });
+
+  it("The isPrime method returns false for -100", function(){
+    result = generatePrime._isPrime(-100)
+    expect(result).toEqual(false)
+  });
+
+  it("The isPrime method returns false for 9.78", function(){
+    result = generatePrime._isPrime(9.78)
+    expect(result).toEqual(false)
+  });
+
+  it("The isPrime method works for a large number such as, 1000000000000000000", function(){
+    result = generatePrime._isPrime(1000000000000000000)
+    expect(result).toEqual(false)
+  });
+
 });
