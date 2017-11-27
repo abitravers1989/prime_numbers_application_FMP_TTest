@@ -1,6 +1,5 @@
 // This module is responsible for getting the input from the user (through the console) then passing this number through the other classes
 // Then outputting the table of primes and multiplication tables.
-
 const CheckInput = require('./src/checkInput').CheckInput;
 const checkInput = new CheckInput();
 const readline = require('readline');
